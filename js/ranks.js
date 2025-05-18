@@ -201,7 +201,7 @@ const RANKS = {
                 if (ret.gte(1) && hasPrestige(0,15)) ret = ret.pow(1.5)
                 return ret
             },
-            '5'() {
+            '4'() {
                 let ret = E(0.96).pow(player.ranks.tier.pow(1/3))
                 return ret
             },
