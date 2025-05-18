@@ -651,7 +651,7 @@ function updateRanksTemp() {
     let fp = RANKS.fp.rank().mul(ffp)
     tmp.ranks.rank.req = E(1.025).pow(player.ranks.rank.div(ffp2).scaleEvery('rank',false,[1,1,1,1,rt_fp2,1,ifp]).pow(rooted_fp).div(fp)).mul(1.05)
     tmp.ranks.rank.bulk = E(0)
-    if (player.mass.gte(10)) tmp.ranks.rank.bulk = player.mass.div(1.05).max(1).log(1.025)().mul(fp).root(rooted_fp).scaleEvery('rank',true,[1,1,1,1,rt_fp2,1,ifp]).mul(ffp2).add(1).floor();
+    if (player.mass.gte(10)) tmp.ranks.rank.bulk = player.mass.div(1.05).max(1).log(1.025).mul(fp).root(rooted_fp).scaleEvery('rank',true,[1,1,1,1,rt_fp2,1,ifp]).mul(ffp2).add(1).floor();
     tmp.ranks.rank.can = player.mass.gte(tmp.ranks.rank.req) && !CHALS.inChal(5) && !CHALS.inChal(10) && !FERMIONS.onActive("03")
 
     fp = RANKS.fp.tier().mul(ffp)
